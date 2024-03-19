@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "AraT5-MSAizer"
+description = "MT system for dialect-to-MSA translation"
+version = "0.1.0"
+authors = ["Murhaf Fares"]
+
+[tool.poetry.dev-dependencies]
+pre-commit = "*"
+ruff = "*"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+peft = "*"
+numpy = "*"
+transformers = "*"
+accelerate = "*"
+bitsandbytes = "*"
+typer = "*"
+datasets = "*"
+sentencepiece = "*"
+evaluate = "*"
+scikit-learn = "*"
+jupyterlab = "*"
+huggingface_hub = "*"
+
+[tool.ruff]
+# Enable pycodestyle ('E') and Pyflakes ('F'), pandas-vet ('PD'), isort ('I').
+select = ["E", "F", "PL", "PD", "ARG", "I"]
+line-length = 120
+ignore = ["PD901"]
+
+[tool.ruff.isort]
+lines-after-imports = 2
+force-wrap-aliases = true
+combine-as-imports = true
+
+[tool.ruff.pylint]
+max-args = 10
